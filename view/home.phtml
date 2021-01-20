@@ -1,0 +1,63 @@
+<div class="page home">
+    <div class="page-header home-header" id="home-header">
+        <div class="page-row top-row">
+            <div id="particles-js"></div>
+            <div class="page-col center">
+                <div class="home-head ts-head">Iwan van der Wal</div>
+            </div>
+            <div class="wave"></div>
+            <div class="wave reverse"></div>
+            <div class="wave slow"></div>
+        </div>
+        <div class="page-row scroll-row">
+            <div class="page-col center">
+                <a href="#home-body" class="page-scroll">
+                    <div class="scroll-text">Read more</div>
+                    <div class="line"></div>
+                    <div class="scroll-icon"><i class="fas fa-2x fa-chevron-down"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page-body home-body" id="home-body">
+        <div class="page-row first-row">
+            <div class="page-col home-col about-bg center">
+                <a href="<?= PageController::url('about') ?>" class="home-row head-row">
+                    <div class="home-text ts-text">About me</div>
+                    <div class="line line-white"></div>
+                </a>
+            </div>
+            <div class="page-col home-col projects-bg center">
+                <a href="<?= PageController::url('projects') ?>" class="home-row head-row">
+                    <div class="home-text ts-text">Projects</div>
+                    <div class="line line-white"></div>
+                </a>
+            </div>
+        </div>
+        <div class="page-row second-row">
+            <div class="page-col home-col center">
+                <a href="<?= PageController::url('simpl') ?>" class="home-row">
+                    <div class="home-img ts-img"><?= ApplicationController::load_svg('simpl') ?></div>
+                    <div class="home-detail">Simpl is my own framework!</div>
+                </a>
+                <div class="simpl-band bs-subtle center"></div>
+            </div>
+            <div class="page-col">
+                <div class="page-row">
+                    <div class="page-col home-col github-bg center">
+                        <a href="https://www.github.com/IJuanTM/" target="_blank" class="home-row">
+                            <div class="home-icon ts-img"><i class="fab fa-github-square"></i></div>
+                            <div class="home-detail ts-text">Check out my GitHub page</div>
+                        </a>
+                    </div>
+                    <div class="page-col home-col linkedin-bg center">
+                        <a href="https://www.linkedin.com/in/iwanvanderwal/" target="_blank" class="home-row">
+                            <div class="home-icon ts-img"><i class="fab fa-linkedin"></i></div>
+                            <div class="home-detail ts-text">Find me on LinkedIn</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

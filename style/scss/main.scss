@@ -1,0 +1,15 @@
+// STYLE
+@import "style";
+@import "forms";
+@import "page";
+
+// RULES
+@import "rules/@keyframes";
+
+// VIEW
+@import "view/home";
+
+// PARTS
+@import "view/parts/content";
+@import "view/parts/footer";
+@import "view/parts/navbar";

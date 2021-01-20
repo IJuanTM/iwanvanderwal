@@ -1,0 +1,19 @@
+{
+  "name": "simpl",
+  "description": "Simpl is an easy to use HTML, PHP, CSS, SCSS and JavaScript framework",
+  "version": "2.1",
+  "scripts": {
+    "sass": "sass --watch style/scss/main.scss style/css/main.css --style compressed"
+  },
+  "dependencies": {
+    "sass": "^1.32.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IJuanTM/simpl"
+  },
+  "keywords": [],
+  "author": "IJuanTM",
+  "license": "ISC",
+  "homepage": "https://www.iwanvanderwal.nl/simpl"
+}

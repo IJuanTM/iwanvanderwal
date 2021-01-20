@@ -1,0 +1,52 @@
+<div class="navbar">
+    <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="menu">
+        <div class="menu-buttons">
+            <div class="menu-home center">
+                <a href="<?= PageController::url(REDIRECT) ?>" class="menu-icon"><i class="fas fa-home"></i></a>
+            </div>
+            <div class="menu-lang">
+                <div class="lang-btn center"><?= ApplicationController::load_svg('flag-nl') ?></div>
+                <div class="lang-btn center"><?= ApplicationController::load_svg('flag-en') ?></div>
+            </div>
+        </div>
+        <div class="menu-links">
+            <div class="menu-row">
+                <div class="menu-col">
+                    <a href="<?= PageController::url("simpl") ?>" class="menu-link simpl-link">
+                        <div class="menu-text">Simpl</div>
+                        <div class="line"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-row">
+                <div class="menu-col">
+                    <a href="<?= PageController::url("projects") ?>" class="menu-link">
+                        <div class="menu-text">Projects</div>
+                        <div class="line"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-row">
+                <div class="menu-col">
+                    <a href="<?= PageController::url("about") ?>" class="menu-link">
+                        <div class="menu-text">About</div>
+                        <div class="line"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-row">
+                <div class="menu-col">
+                    <a href="<?= PageController::url("contact") ?>" class="menu-link">
+                        <div class="menu-text">Contact</div>
+                        <div class="line"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,167 @@
+// ------------------------------------------------------------------------------------------------
+
+// Scroll
+
+@-webkit-keyframes scroll-icon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(1rem);
+  }
+}
+
+@-moz-keyframes scroll-icon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(1rem);
+  }
+}
+
+@-o-keyframes scroll-icon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes scroll-icon {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
+// ------------------------------------------------------------------------------------------------
+
+// Wave
+
+@-webkit-keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100vmin;
+  }
+}
+
+@-moz-keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100vmin;
+  }
+}
+
+@-o-keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100vmin;
+  }
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100vmin;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------
+
+// Reverse wave
+
+@-webkit-keyframes wave-reverse {
+  from {
+    background-position-x: 80vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+@-moz-keyframes wave-reverse {
+  from {
+    background-position-x: 80vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+@-o-keyframes wave-reverse {
+  from {
+    background-position-x: 80vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+@keyframes wave-reverse {
+  from {
+    background-position-x: 80vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------
+
+// Slow wave
+
+@-webkit-keyframes wave-slow {
+  from {
+    background-position-x: 60vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+@-moz-keyframes wave-slow {
+  from {
+    background-position-x: 60vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+@-o-keyframes wave-slow {
+  from {
+    background-position-x: 60vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+@keyframes wave-slow {
+  from {
+    background-position-x: 60vmin;
+  }
+  to {
+    background-position-x: 0;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------
+

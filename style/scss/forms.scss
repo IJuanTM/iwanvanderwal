@@ -1,0 +1,240 @@
+// Form Alerts
+div.alert {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1rem 1.75rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-family: inherit;
+  font-size: 1rem;
+
+  &.success {
+    color: #155724;
+    background-color: #D4EDDA;
+    border-color: #C3E6CB;
+  }
+
+  &.warning {
+    color: #856404;
+    background-color: #FFF3CD;
+    border-color: #FFEEBA;
+  }
+
+  &.error {
+    color: #721C24;
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+  }
+
+  &.info {
+    color: #0C5460;
+    background-color: #D1ECF1;
+    border-color: #BEE5EB;
+  }
+}
+
+/*
+This form template is based-of Bootstrap but made simpler and smarter!
+It can be used to make fully modular forms without the need of columns and rows.
+If you want to use another front-end library you should delete this file.
+ */
+
+// Form Styling
+form {
+  @media (min-width: $small) {
+    padding: .5rem;
+
+    > div.form-row {
+      display: flex !important;
+    }
+  }
+
+  > div.form-row {
+    > div.form-group {
+      flex: 1;
+      padding: 0 5px 0 5px;
+      margin-bottom: 1rem;
+
+      > label {
+        display: inline-block;
+        font-size: 1rem;
+        margin-bottom: .2rem;
+      }
+
+      > span.required {
+        color: red;
+        display: inline-block;
+        padding-left: .2rem;
+      }
+
+      > div.input-group, div.area-group {
+        display: flex;
+        width: 100%;
+
+        > * {
+          display: flex;
+          font-size: .9rem;
+          font-family: inherit;
+          border: 1px solid #CED4DA;
+        }
+
+        > input, textarea {
+          width: 100%;
+          position: relative;
+          min-height: 1.5rem;
+          padding: .4rem .7rem;
+          background-color: #FFFFFF;
+        }
+
+        > input.slider {
+          -webkit-appearance: none;
+          appearance: none;
+          margin: .75rem 0 .75rem 0;
+          background-color: #D3D3D3;
+          border-radius: .5rem;
+          min-height: 0;
+          outline: none;
+          height: .6rem;
+          opacity: 0.75;
+          padding: 0;
+          border: 0;
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border-radius: 50%;
+            width: 1.4rem;
+            height: 1.4rem;
+            background-color: #6C757D;
+            cursor: pointer;
+
+            &:hover, &:focus {
+              background-color: #5A6268;
+            }
+
+            &:active {
+              background-color: #5A6268;
+            }
+          }
+        }
+
+        > input.br-both, textarea.br-both {
+          border-radius: .25rem;
+        }
+
+        > input.br-right, textarea.br-right {
+          border-radius: 0 .25rem .25rem 0;
+        }
+
+        > input.br-left, textarea.br-left {
+          border-radius: .25rem 0 0 .25rem;
+        }
+
+        > div.input-prepend, div.input-append {
+          flex-shrink: 0;
+          font-size: 1rem;
+          align-items: center;
+          padding: .4rem .7rem;
+          background-color: #E9ECEf;
+          justify-content: center;
+
+          > svg {
+            width: 1.25rem;
+          }
+
+          > .toggle-password {
+            cursor: pointer;
+          }
+        }
+
+        > div.input-prepend {
+          margin-right: -1px;
+          border-radius: .25rem 0 0 .25rem;
+        }
+
+        > div.input-append {
+          margin-left: -1px;
+          border-radius: 0 .25rem .25rem 0;
+        }
+      }
+
+      > span.input-text {
+        display: inline-block;
+        font-size: .8rem;
+        margin-top: .2rem;
+      }
+
+      > div.slider-text {
+        display: flex;
+        margin-top: .2rem;
+
+        > * {
+          flex-grow: 1;
+          font-size: .8rem;
+        }
+
+        > div.slider-left {
+          text-align: left;
+        }
+
+        > div.slider-value {
+          text-align: center;
+        }
+
+        > div.slider-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  > div.btn-row {
+    text-align: center;
+
+    > button {
+      color: #FFFFFF;
+      cursor: pointer;
+      font-size: 1rem;
+      background-color: #6C757D;
+      padding: .5rem 15%;
+      font-family: inherit;
+      border: 1px #6C757D solid;
+      border-radius: .25rem;
+
+      &:active {
+        background-color: #545B62;
+        border-color: #4E555B;
+      }
+
+      &:hover {
+        background-color: #5A6268;
+        border-color: #545B62;
+      }
+
+      &:focus {
+        outline: 0;
+        background-color: #5A6268;
+        border-color: #545B62;
+        box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, .5);
+      }
+    }
+  }
+}
+
+// Form Sizes
+form {
+  width: 80vw;
+
+  @media (min-width: $small) {
+    width: 60vw;
+  }
+
+  @media (min-width: $large) {
+    &.contact-form, &.register-form {
+      width: 40vw;
+    }
+
+    &.login-form {
+      width: 25vw;
+    }
+  }
+}

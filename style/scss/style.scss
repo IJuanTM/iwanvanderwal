@@ -1,0 +1,183 @@
+// Config
+$img: '../../img/';
+$ico: '../../img/ico/';
+$svg: '../../img/svg/';
+
+/* Usefull @media breakpoints: */
+
+// Extra Small Screens
+$xsmall: 320px;
+
+// Small Screens
+$small: 481px;
+
+// Medium Screens
+$medium: 641px;
+
+// Large Screens
+$large: 961px;
+
+// Extra Large Screens
+$xlarge: 1025px;
+
+// Ultra Large Screens
+$xxlarge: 1281px;
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202020;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #404040;
+}
+
+::-webkit-scrollbar-track {
+  background: #DDD;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #DEDEDE;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #EDEDED;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+// Base CSS
+html, body {
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Montserrat", "Comfortaa", sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Loading text
+.load {
+  z-index: 4;
+  opacity: 1;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: #000;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+
+  .load-text {
+    flex: 1;
+    color: #FFF;
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    font-family: "Jost", sans-serif;
+  }
+}
+
+// Particles
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+// Hover text line
+.line {
+  height: .2rem;
+  background-color: #000;
+  -webkit-transition: width .5s;
+  -moz-transition: width .5s;
+  -o-transition: width .5s;
+  transition: width .5s;
+  width: 0;
+
+  &.line-white {
+    background-color: #FFF;
+  }
+}
+
+// Drop shadows
+.ts-head {
+  text-shadow: 0 1px 0 #CCC, 0 2px 0 #C9C9C9, 0 3px 0 #BBB, 0 4px 0 #B9B9B9, 0 5px 0 #AAA,
+  0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2),
+  0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.ts-text {
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.ts-img > svg {
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .5));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .5));
+}
+
+.bs-subtle {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+}
+
+// Wave animation
+div.wave, div.reverse {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background: url($img + "wave.png") repeat-x;
+  -webkit-animation: wave 10s linear infinite;
+  -moz-animation: wave 10s linear infinite;
+  -o-animation: wave 10s linear infinite;
+  animation: wave 10s linear infinite;
+  background-size: 100vmin 10vh;
+
+  &.reverse {
+    filter: opacity(.4);
+    background-position-y: bottom;
+    -webkit-animation: wave-reverse 8s linear infinite;
+    -moz-animation: wave-reverse 8s linear infinite;
+    -o-animation: wave-reverse 8s linear infinite;
+    animation: wave-reverse 8s linear infinite;
+    background-size: 80vmin 8vh !important;
+  }
+
+  &.slow {
+    filter: opacity(.6);
+    background-position-y: bottom;
+    -webkit-animation: wave-slow 12s linear infinite;
+    -moz-animation: wave-slow 12s linear infinite;
+    -o-animation: wave-slow 12s linear infinite;
+    animation: wave-slow 12s linear infinite;
+    background-size: 60vmin 6vh !important;
+  }
+}
