@@ -37,18 +37,17 @@ div.navbar {
   div.menu {
     z-index: 2;
     width: 100%;
-    height: 50vh;
-    top: -50vh;
     position: absolute;
+    padding-bottom: 10vh;
     background-color: #FFF;
-    -webkit-transition: top .25s;
-    -moz-transition: top .25s;
-    -o-transition: top .25s;
-    transition: top .25s;
-    -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0 2px 0 0 rgba(0, 0, 0, .5);
-    -o-box-shadow: 0 2px 0 0 rgba(0, 0, 0, .5);
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, .5);
+    -webkit-transition: transform .25s;
+    -moz-transition: transform .25s;
+    -o-transition: transform .25s;
+    transition: transform .25s;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
 
     div.menu-buttons {
       height: 5rem;
@@ -89,14 +88,20 @@ div.navbar {
         }
       }
 
-      a.menu-icon {
+      a.menu-img {
         font-size: 2rem;
+        padding: 1rem;
+        display: flex;
+
+        > svg {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
 
     div.menu-links {
       display: flex;
-      height: calc(100% - 10rem);
       flex-direction: column;
 
       div.menu-row {
@@ -140,7 +145,10 @@ div.navbar {
     }
 
     &.extended {
-      top: 0;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
     }
   }
 }

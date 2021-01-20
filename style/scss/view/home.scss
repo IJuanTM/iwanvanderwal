@@ -125,7 +125,6 @@ div.home-body {
       }
 
       div.home-text {
-        margin-bottom: -.25rem;
         font-family: "Comfortaa", sans-serif;
         font-size: 2rem;
 
@@ -175,7 +174,7 @@ div.home-body {
       width: 20rem;
       height: 2rem;
       position: absolute;
-      background-color: #C4232E;
+      background-color: #E52D2D;
       transform: rotate(45deg);
 
       @media (max-width: $small) {

@@ -12,17 +12,16 @@ div.footer {
     a.footer-text {
       display: block;
       font-size: 1rem;
-      font-family: "Work Sans", sans-serif;
-      -webkit-transition: all .25s;
-      -moz-transition: all .25s;
-      -o-transition: all .25s;
-      transition: all .25s;
+      font-family: "Montserrat", sans-serif;
+    }
 
-      &:hover {
-        -webkit-transform: scaleX(1.05) scaleY(.95);
-        -moz-transform: scaleX(1.05) scaleY(.95);
-        -o-transform: scaleX(1.05) scaleY(.95);
-        transform: scaleX(1.05) scaleY(.95);
+    div.line {
+      height: .1rem;
+    }
+
+    &:hover {
+      div.line {
+        width: 100%;
       }
     }
   }
@@ -33,5 +32,13 @@ div.footer {
     margin: 1rem;
     position: absolute;
     font-size: 2rem;
+    -webkit-transition: transform .25s;
+    -moz-transition: transform .25s;
+    -o-transition: transform .25s;
+    transition: transform .25s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
