@@ -5,13 +5,13 @@
         </span>
     </button>
     <div class="menu">
-        <div class="menu-buttons">
+        <div class="menu-buttons center">
             <div class="menu-home center">
-                <a href="<?= PageController::url(REDIRECT) ?>" class="menu-img"><?= ApplicationController::load_svg('logo') ?></a>
+                <a href="<?= PageController::url(REDIRECT) ?>" class="menu-img" title="Homepage"><?= ApplicationController::load_svg('logo') ?></a>
             </div>
             <div class="menu-lang">
-                <div class="lang-btn center"><?= ApplicationController::load_svg('flag-nl') ?></div>
-                <div class="lang-btn center"><?= ApplicationController::load_svg('flag-en') ?></div>
+                <div class="lang-btn btn-nl center" title="Set language to Dutch"><?= ApplicationController::load_svg('flag-nl') ?></div>
+                <div class="lang-btn btn-en center selected" title="Set language to English"><?= ApplicationController::load_svg('flag-en') ?></div>
             </div>
         </div>
         <div class="menu-links">

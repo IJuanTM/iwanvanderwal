@@ -8,7 +8,6 @@ div.navbar {
     z-index: 3;
     position: absolute;
     text-align: center;
-    display: inline-block;
     height: 5rem;
     width: 5rem;
     right: 0;
@@ -17,19 +16,21 @@ div.navbar {
       outline: 0;
     }
 
-    span.hamburger-inner, span.hamburger-inner:before, span.hamburger-inner:after {
+    span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after {
       background-color: #FFF;
+      -webkit-transition: background-color .15s ease-in;
+      -moz-transition: background-color .15s ease-in;
+      -o-transition: background-color .15s ease-in;
+      transition: background-color .15s ease-in;
     }
 
     &.is-active {
-      span.hamburger-inner, span.hamburger-inner:before, span.hamburger-inner:after {
+      span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after {
         background-color: #000;
       }
     }
 
     span.hamburger-box {
-      position: relative;
-      display: inline-block;
       vertical-align: middle;
     }
   }
@@ -38,7 +39,7 @@ div.navbar {
     z-index: 2;
     width: 100%;
     position: absolute;
-    padding-bottom: 10vh;
+    padding-bottom: 5rem;
     background-color: #FFF;
     -webkit-transition: transform .25s;
     -moz-transition: transform .25s;
@@ -51,14 +52,13 @@ div.navbar {
 
     div.menu-buttons {
       height: 5rem;
-      display: flex;
-      align-items: center;
       margin: 0 5rem;
 
       div.menu-home {
-        height: 5rem;
+        left: 0;
         width: 5rem;
-        margin-left: -5rem;
+        height: 5rem;
+        position: absolute;
       }
 
       div.menu-lang {
@@ -69,21 +69,21 @@ div.navbar {
         div.lang-btn {
           margin: 0 1rem;
           cursor: pointer;
+          -webkit-transition: filter .5s;
+          -moz-transition: filter .5s;
+          -o-transition: filter .5s;
+          transition: filter .5s;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 
           > svg {
             height: 1.5rem;
             width: auto;
-            -webkit-transition: filter .5s;
-            -moz-transition: filter .5s;
-            -o-transition: filter .5s;
-            transition: filter .5s;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
+          }
 
-            &.selected {
-              -webkit-filter: none;
-              filter: none;
-            }
+          &.selected {
+            -webkit-filter: none;
+            filter: none;
           }
         }
       }
@@ -115,7 +115,7 @@ div.navbar {
           flex: 1;
 
           a.menu-link {
-            padding: 1vh 1vmin;
+            padding: .5rem 0;
 
             div.menu-text {
               font-size: 1.4rem;

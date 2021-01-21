@@ -181,3 +181,30 @@ div.wave, div.reverse {
     background-size: 60vmin 6vh !important;
   }
 }
+
+// Glitch text
+.glitch {
+  -webkit-animation: glitch 1s linear infinite;
+  animation: glitch 1s linear infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.glitch::before {
+  -webkit-animation: glitchTop 1s linear infinite;
+  animation: glitchTop 1s linear infinite;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch::after {
+  -webkit-animation: glitchBottom 1.5s linear infinite;
+  animation: glitchBottom 1.5s linear infinite;
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
