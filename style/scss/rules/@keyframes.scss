@@ -301,3 +301,87 @@
     transform: translate(-22px, 5px) skew(21deg);
   }
 }
+
+// Text wave
+@-webkit-keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@-moz-keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@-o-keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+// Cursor blink
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Brightness effect
+@keyframes bright {
+  0% {
+    filter: brightness(100);
+  }
+  100% {
+    filter: brightness(200);
+  }
+}

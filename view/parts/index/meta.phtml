@@ -10,6 +10,9 @@
 <!--Description-->
 <meta name="description" content="Simpl is an HTML, PHP, CSS, SCSS and JavaScript framework!">
 
-<!--Theme color-->
-<meta name="msapplication-TileColor" content="#2b5797">
+<!--Theme Color-->
+<?php
+if ($this->urlArr['pagename'] == "simpl") echo '<meta name="msapplication-TileColor" content="#00aba9">';
+else echo '<meta name="msapplication-TileColor" content="#2b5797">';
+?>
 <meta name="theme-color" content="#ffffff">

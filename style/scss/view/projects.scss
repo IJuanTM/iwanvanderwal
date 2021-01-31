@@ -1,0 +1,61 @@
+div.projects-header {
+  min-height: 90vh;
+  padding: 5vh 5vmin;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), #000 100%);
+
+  @media (max-width: $small) {
+    margin-top: 5rem;
+    min-height: calc(90vh - 5rem);
+  }
+
+  div.projects-term {
+    color: #FFF;
+    font-size: 1rem;
+    font-family: "Inconsolata", monospace;
+
+    @media (min-width: $small) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: $medium) {
+      font-size: 2rem;
+    }
+
+    a.term-link {
+      pointer-events: all;
+      text-decoration: underline;
+
+      &:hover {
+        color: rgba(25, 25, 25, .75);
+        background-color: rgba(255, 255, 255, .5);
+      }
+    }
+
+    > pre {
+      margin: 0;
+
+      &:after {
+        content: "|";
+        animation: blink 500ms linear infinite alternate;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+  }
+
+  &::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+}

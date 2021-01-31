@@ -1,9 +1,28 @@
-<div class="footer center">
-    <div class="footer-row">
-        <a href="<?= PageController::url(REDIRECT) ?>" class="footer-text ts-text">&copy; Iwan van der Wal</a>
-        <div class="line line-white"></div>
-    </div>
-    <a href="#home-header" class="scroll-up"><i class="fa fa-chevron-up"></i></a>
-    <div class="wave reverse"></div>
-    <div class="wave slow"></div>
-</div>
+<?php
+if ($this->urlArr['pagename'] == "home" || $this->urlArr['pagename'] == "") {
+    echo '<div class="footer footer-home center">
+            <div class="footer-row">
+                <a href="' . PageController::url(REDIRECT) . '" class="footer-text ts-text">&copy; Iwan van der Wal</a>
+                <div class="line line-white"></div>
+            </div>
+            <a href="#home-header" class="scroll-up"><i class="fa fa-chevron-up"></i></a>
+            <div class="wave reverse"></div>
+            <div class="wave slow"></div>
+          </div>';
+} elseif ($this->urlArr['pagename'] == "projects") {
+    echo '<div class="footer footer-projects center">
+            <div class="footer-row">
+                <a href="' . PageController::url(REDIRECT) . '" class="footer-text ts-text">&copy; Iwan van der Wal</a>
+                <div class="line line-white"></div>
+            </div>
+            <a href="#projects-header" class="scroll-up"><i class="fa fa-chevron-up"></i></a>
+          </div>';
+} elseif ($this->urlArr['pagename'] == "simpl") {
+    echo '<div class="footer footer-simpl center">
+            <div class="footer-row">
+                <a href="' . PageController::url(REDIRECT) . '" class="footer-text">&copy; Iwan van der Wal</a>
+                <div class="line line-white"></div>
+            </div>
+            <a href="#simpl-header" class="scroll-up"><i class="fa fa-chevron-up"></i></a>
+          </div>';
+}

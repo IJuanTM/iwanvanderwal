@@ -1,10 +1,7 @@
 // Footer styling
 
 div.footer {
-  color: #FFF;
-  height: 25vh;
   position: relative;
-  background-color: #000;
 
   div.footer-row {
     margin-bottom: 5vh;
@@ -30,8 +27,8 @@ div.footer {
     top: 0;
     right: 0;
     margin: 1rem;
-    position: absolute;
     font-size: 2rem;
+    position: absolute;
     -webkit-transition: transform .25s;
     -moz-transition: transform .25s;
     -o-transition: transform .25s;
@@ -39,6 +36,37 @@ div.footer {
 
     &:hover {
       transform: scale(1.1);
+    }
+  }
+
+  &.footer-home {
+    color: #FFF;
+    height: 25vh;
+    background-color: #000;
+  }
+
+  &.footer-projects {
+
+  }
+
+  &.footer-simpl {
+    height: 10vh;
+    background-color: $simpl;
+
+    div.footer-row {
+      margin-bottom: 0;
+
+      a.footer-text {
+        font-family: "Jost", monospace;
+        font-size: 1.1rem;
+        color: #FFF;
+      }
+    }
+
+    a.scroll-up {
+      color: #FFF;
+      margin: .75rem;
+      font-size: 1.6rem;
     }
   }
 }

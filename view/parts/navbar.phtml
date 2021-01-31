@@ -1,52 +1,119 @@
-<div class="navbar">
-    <button class="hamburger hamburger--squeeze" type="button">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-    <div class="menu">
-        <div class="menu-buttons center">
-            <div class="menu-home center">
-                <a href="<?= PageController::url(REDIRECT) ?>" class="menu-img" title="Homepage"><?= ApplicationController::load_svg('logo') ?></a>
-            </div>
-            <div class="menu-lang">
-                <div class="lang-btn btn-nl center" title="Set language to Dutch"><?= ApplicationController::load_svg('flag-nl') ?></div>
-                <div class="lang-btn btn-en center selected" title="Set language to English"><?= ApplicationController::load_svg('flag-en') ?></div>
-            </div>
-        </div>
-        <div class="menu-links">
-            <div class="menu-row">
-                <div class="menu-col">
-                    <a href="<?= PageController::url("simpl") ?>" class="menu-link simpl-link">
-                        <div class="menu-text">Simpl</div>
-                        <div class="line"></div>
-                    </a>
+<?php
+if ($this->urlArr['pagename'] == "home" || $this->urlArr['pagename'] == "") {
+    echo '<div class="navbar navbar-home">
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="menu">
+                <div class="menu-buttons center">
+                    <div class="menu-home center">
+                        <a href="' . PageController::url(REDIRECT) . '" class="menu-img" title="Homepage">' . ApplicationController::load_svg('logo') . '</a>
+                    </div>
+                    <div class="menu-lang">
+                        <div class="lang-btn btn-nl center" title="Set language to Dutch">' . ApplicationController::load_svg('flag-nl') . '</div>
+                        <div class="lang-btn btn-en center selected" title="Set language to English">' . ApplicationController::load_svg('flag-en') . '</div>
+                    </div>
+                </div>
+                <div class="menu-links">
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("simpl") . '" class="menu-link simpl-link">
+                                <div class="menu-text">Simpl</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("projects") . '" class="menu-link">
+                                <div class="menu-text">Projects</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("about") . '" class="menu-link">
+                                <div class="menu-text">About</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("contact") . '" class="menu-link">
+                                <div class="menu-text">Contact</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="menu-row">
-                <div class="menu-col">
-                    <a href="<?= PageController::url("projects") ?>" class="menu-link">
-                        <div class="menu-text">Projects</div>
-                        <div class="line"></div>
-                    </a>
+          </div>';
+} elseif ($this->urlArr['pagename'] == "projects") {
+    echo '<div class="navbar navbar-projects">
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="menu">
+                <div class="menu-buttons center">
+                    <div class="menu-home center">
+                        <a href="' . PageController::url(REDIRECT) . '" class="menu-img" title="Homepage">' . ApplicationController::load_svg('logo') . '</a>
+                    </div>
+                    <div class="menu-lang">
+                        <div class="lang-btn btn-nl center" title="Set language to Dutch">' . ApplicationController::load_svg('flag-nl') . '</div>
+                        <div class="lang-btn btn-en center selected" title="Set language to English">' . ApplicationController::load_svg('flag-en') . '</div>
+                    </div>
+                </div>
+                
+            </div>
+          </div>';
+} elseif ($this->urlArr['pagename'] == "simpl") {
+    echo '<div class="navbar navbar-simpl">
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="menu">
+                <div class="menu-links">
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url(REDIRECT) . '" class="menu-link">
+                                <div class="menu-text">Home</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("projects") . '" class="menu-link">
+                                <div class="menu-text">Projects</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("about") . '" class="menu-link">
+                                <div class="menu-text">About</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-col center">
+                            <a href="' . PageController::url("contact") . '" class="menu-link">
+                                <div class="menu-text">Contact</div>
+                                <div class="line"></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="menu-row">
-                <div class="menu-col">
-                    <a href="<?= PageController::url("about") ?>" class="menu-link">
-                        <div class="menu-text">About</div>
-                        <div class="line"></div>
-                    </a>
-                </div>
-            </div>
-            <div class="menu-row">
-                <div class="menu-col">
-                    <a href="<?= PageController::url("contact") ?>" class="menu-link">
-                        <div class="menu-text">Contact</div>
-                        <div class="line"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+          </div>';
+}

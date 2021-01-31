@@ -16,20 +16,6 @@ div.navbar {
       outline: 0;
     }
 
-    span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after {
-      background-color: #FFF;
-      -webkit-transition: background-color .15s ease-in;
-      -moz-transition: background-color .15s ease-in;
-      -o-transition: background-color .15s ease-in;
-      transition: background-color .15s ease-in;
-    }
-
-    &.is-active {
-      span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after {
-        background-color: #000;
-      }
-    }
-
     span.hamburger-box {
       vertical-align: middle;
     }
@@ -41,10 +27,10 @@ div.navbar {
     position: absolute;
     padding-bottom: 5rem;
     background-color: #FFF;
-    -webkit-transition: transform .25s;
-    -moz-transition: transform .25s;
-    -o-transition: transform .25s;
-    transition: transform .25s;
+    -webkit-transition: transform .35s ease-in-out;
+    -moz-transition: transform .35s ease-in-out;
+    -o-transition: transform .35s ease-in-out;
+    transition: transform .35s ease-in-out;
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
@@ -109,9 +95,6 @@ div.navbar {
         flex: 1;
 
         div.menu-col {
-          display: flex;
-          justify-content: center;
-          align-items: center;
           flex: 1;
 
           a.menu-link {
@@ -149,6 +132,51 @@ div.navbar {
       -moz-transform: translateY(0);
       -o-transform: translateY(0);
       transform: translateY(0);
+    }
+  }
+
+  &.navbar-home {
+    button.hamburger {
+      span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after {
+        background-color: #FFF;
+        -webkit-transition: background-color .35s;
+        -moz-transition: background-color .35s;
+        -o-transition: background-color .35s;
+        transition: background-color .35s;
+      }
+
+      &.is-active {
+        span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after {
+          background-color: #000;
+        }
+      }
+    }
+  }
+
+  &.navbar-projects {
+
+  }
+
+  &.navbar-simpl {
+    div.menu {
+      right: 0;
+      width: 70%;
+      padding-bottom: 0;
+      background-color: transparent;
+
+      @media (max-width: $large) {
+        width: 100%;
+      }
+
+      div.menu-links {
+        flex-direction: row;
+        padding-right: 5rem;
+        padding-left: 2.5rem;
+
+        div.menu-row {
+          height: 5rem;
+        }
+      }
     }
   }
 }

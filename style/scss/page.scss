@@ -2,19 +2,8 @@ div.page {
   display: flex;
   flex-direction: column;
 
-  div.page-header, div.page-body {
+  div.page-header, div.page-body, div.page-row, div.page-col {
     flex: 1;
-    flex-direction: column;
     display: flex;
-
-    div.page-row {
-      flex: 1;
-      display: flex;
-
-      div.page-col {
-        flex: 1;
-        display: flex;
-      }
-    }
   }
 }

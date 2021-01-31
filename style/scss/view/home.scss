@@ -2,6 +2,7 @@
 
 div.home-header {
   height: 100vh;
+  flex-direction: column;
   background-color: #000;
 
   div.top-row {
@@ -31,10 +32,10 @@ div.home-header {
       }
 
       &:hover {
-        -webkit-transform: scaleY(.95) scaleX(1.05);
-        -moz-transform: scaleY(.95) scaleX(1.05);
-        -o-transform: scaleY(.95) scaleX(1.05);
-        transform: scaleY(.95) scaleX(1.05);
+        -webkit-transform: scale(1.05, .95);
+        -moz-transform: scale(1.05, .95);
+        -o-transform: scale(1.05, .95);
+        transform: scale(1.05, .95);
       }
     }
   }
@@ -78,8 +79,10 @@ div.home-header {
 
 div.home-body {
   height: 100vh;
+  flex-direction: column;
 
   div.first-row {
+    z-index: 2;
     height: 100vh;
     flex-direction: column;
 
@@ -100,6 +103,7 @@ div.home-body {
   }
 
   div.home-col {
+    z-index: 1;
     position: relative;
     box-shadow: none;
     -webkit-transition: box-shadow .5s;
@@ -118,10 +122,10 @@ div.home-body {
 
       div.home-img {
         margin-bottom: .5rem;
-      }
 
-      div.home-img > svg {
-        width: 8rem;
+        > svg {
+          width: 8rem;
+        }
       }
 
       div.home-text {
@@ -162,35 +166,20 @@ div.home-body {
         }
       }
 
-      &.head-row {
+      &.text-row {
         width: auto;
       }
     }
 
     div.simpl-band {
-      z-index: -1;
-      top: 5vh;
-      right: -15vmin;
-      width: 20rem;
-      height: 2rem;
-      position: absolute;
-      background-color: #E52D2D;
-      transform: rotate(45deg);
+      background-color: $simpl;
 
       @media (max-width: $small) {
         display: none;
       }
 
-      @media (min-width: $medium) {
-        top: 7vh;
-        right: -12vmin;
-        height: 2.5rem;
-      }
-
-      @media (min-width: $xlarge) {
-        top: 9vh;
-        right: -14vmin;
-        height: 3rem;
+      &::before, &::after {
+        background-color: $simpl;
       }
     }
 

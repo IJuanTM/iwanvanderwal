@@ -66,14 +66,14 @@ $(document).on('readystatechange', function () {
       document.getElementById("content").style.visibility = "hidden";
     } else if (state === "complete") {
       setTimeout(function () {
-        $("html, body").css("overflow", "visible");
+        $("html, body").css("overflow-y", "visible");
         document.getElementById("interactive");
         document.getElementById("load").style.opacity = "0";
         setTimeout(function () {
           document.getElementById("load").style.visibility = "hidden"
         }, 250);
         document.getElementById("content").style.visibility = "visible";
-      }, 1000);
+      }, 1250);
     }
   }
 });
@@ -157,14 +157,90 @@ hamburger.addEventListener("click", function () {
 $(document).on('click', '.lang-btn', function () {
   const nl = $(".btn-nl");
   const en = $(".btn-en");
-  if ($(this).hasClass("btn-en")) {
+  if ($(this).hasClass("btn-nl") && !(nl.hasClass("selected"))) {
     nl.toggleClass("selected");
-    $("html").attr("lang", "en")
-  } else if ($(this).hasClass("btn-nl")) {
     en.toggleClass("selected");
-    $("html").attr("lang", "nl")
+    $("html").attr("lang", "nl");
+  } else if ($(this).hasClass("btn-en") && !(en.hasClass("selected"))) {
+    en.toggleClass("selected");
+    nl.toggleClass("selected");
+    $("html").attr("lang", "en");
   }
-  $(this).toggleClass("selected");
 });
 
 // ------------------------------------------------------------------------------------------------
+
+/**
+ * Wave text animation
+ */
+
+if (document.querySelector(".text-wave") !== null) {
+  const text = document.querySelector('.text-wave').innerHTML;
+  document.querySelector('.text-wave').innerHTML = "";
+  text.split('').forEach(function (e) {
+    e = e === " " ? "&nbsp;" : e;
+    const span = document.createElement('span');
+    span.innerHTML = e;
+    document.querySelector('.text-wave').appendChild(span);
+  });
+}
+
+// ------------------------------------------------------------------------------------------------
+
+/**
+ * Typewriter effect
+ */
+
+function setupTypewriter(t) {
+  const HTML = t.innerHTML;
+  t.innerHTML = "";
+  let cursorPosition = 0,
+    tag = "",
+    writingTag = false,
+    tagOpen = false,
+    typeSpeed = 100,
+    tempTypeSpeed = 0;
+  const type = function () {
+    if (writingTag === true) tag += HTML[cursorPosition];
+    if (HTML[cursorPosition] === "<") {
+      tempTypeSpeed = 0;
+      if (tagOpen) {
+        tagOpen = false;
+        writingTag = true;
+      } else {
+        tag = "";
+        tagOpen = true;
+        writingTag = true;
+        tag += HTML[cursorPosition];
+      }
+    }
+    if (!writingTag && tagOpen) tag.innerHTML += HTML[cursorPosition];
+    if (!writingTag && !tagOpen) {
+      if (HTML[cursorPosition] === " ") tempTypeSpeed = 0;
+      else tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+      t.innerHTML += HTML[cursorPosition];
+    }
+    if (writingTag === true && HTML[cursorPosition] === ">") {
+      tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+      writingTag = false;
+      if (tagOpen) {
+        const newSpan = document.createElement("span");
+        t.appendChild(newSpan);
+        newSpan.innerHTML = tag;
+        tag = newSpan.firstChild;
+      }
+    }
+    cursorPosition += 1;
+    if (cursorPosition < HTML.length - 1) setTimeout(type, tempTypeSpeed);
+  }
+  return {
+    type: type
+  }
+}
+
+if (document.getElementById("typewriter") !== null) {
+  typewriter = setupTypewriter(typewriter);
+  setTimeout(function () {
+    typewriter.type();
+  }, 1500);
+}

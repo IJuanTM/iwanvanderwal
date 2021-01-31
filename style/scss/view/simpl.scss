@@ -1,0 +1,174 @@
+div.simpl-header {
+  height: 100vh;
+
+  @media (max-width: $large) {
+    flex-direction: column-reverse;
+  }
+
+  div.side-row {
+    flex: 0 1 30%;
+    background-color: $simpl;
+
+    @media (max-width: $large) {
+      flex: 1;
+      height: 50vh;
+    }
+
+    div.side-col {
+      margin: 5vh 0;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      div.info-row {
+
+        @media (max-width: $large) {
+          display: none;
+        }
+
+        div.info-col {
+          flex-direction: column;
+
+          div.info-text {
+            color: #FFF;
+            font-size: 1rem;
+            margin: 0 4rem 1rem;
+            text-align: center;
+
+            a.info-link {
+              text-decoration: underline;
+
+              &:hover {
+                opacity: .9;
+              }
+            }
+          }
+        }
+      }
+
+      div.apps-row {
+
+        @media (min-width: $large) {
+          flex: 0 1 25%;
+        }
+
+        div.apps-col {
+          flex-direction: column;
+
+          div.icon-row {
+            text-align: center;
+
+            @media (min-width: $large) {
+              margin: 0 1rem;
+            }
+
+            a.info-icon {
+              color: #FFF;
+              font-size: 3rem;
+              margin: .5rem;
+
+              > svg {
+                -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .5));
+                filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .5));
+              }
+            }
+          }
+        }
+      }
+
+      div.download-row {
+        flex: 0 1 25%;
+
+        div.download-col {
+          flex-direction: column;
+
+          a.simpl-download {
+            padding: .8rem 1.8rem;
+            border-radius: 0.5rem;
+            background-color: #FFF;
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .75), 2px 2px 4px -2px rgba(0, 0, 0, .75);
+            -webkit-transition: all .1s;
+            -moz-transition: all .1s;
+            -o-transition: all .1s;
+            transition: all .1s;
+
+            &:hover {
+              box-shadow: inset 2px 2px 4px -2px rgba(0, 0, 0, .75), 0 0 0 0 rgba(0, 0, 0, .75);
+            }
+          }
+
+          div.download-detail {
+            color: #FFF;
+            font-size: .6rem;
+            font-family: "Jost", monospace;
+            margin-top: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+  div.simpl-row {
+    position: relative;
+
+    @media (max-width: $large) {
+      height: 100vh;
+    }
+
+    div.simpl-col {
+      flex-direction: column;
+
+      div.head-row {
+        text-align: center;
+        margin: 0 5vmin;
+
+        div.simpl-head {
+          color: $simpl;
+          font-size: 4.2rem;
+          margin-bottom: 1rem;
+          font-family: "Jost", monospace;
+        }
+
+        div.simpl-detail {
+          font-size: 1.4rem;
+        }
+
+        a.simpl-extra {
+          font-size: .6rem;
+          margin-top: .5rem;
+          text-decoration: underline;
+
+          @media (min-width: $large) {
+            display: none;
+          }
+
+          &:hover {
+            opacity: .9;
+          }
+        }
+      }
+
+      div.footer-row {
+        flex: 0 1;
+
+        div.footer-simpl {
+          color: $simpl;
+          margin: .5rem 0;
+          font-family: "Jost", monospace;
+          font-size: 1rem;
+
+          &:hover {
+            opacity: .9;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.simpl-body {
+  height: 90vh;
+
+  @media (max-width: $large) {
+    height: 40vh;
+  }
+}

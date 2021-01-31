@@ -7,7 +7,11 @@
 @import "rules/@keyframes";
 
 // VIEW
+@import "view/about";
+@import "view/contact";
 @import "view/home";
+@import "view/projects";
+@import "view/simpl";
 
 // PARTS
 @import "view/parts/content";
